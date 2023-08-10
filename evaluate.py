@@ -35,7 +35,7 @@ if __name__ == '__main__':
         act_dim_list.append(act_space.n)  # Discrete
 
     maddpg = MADDPG(obs_dim_list, act_dim_list, 0, 0, 0)
-    model_dir = os.path.join('results', args.env, args.folder)
+    model_dir = "D:\\临时学习资料\\C3剑桥大学强化深度学习\\Project\\preliminary project\\maddpg-mpe-pytorch\\maddpg-mpe-pytorch\\results\\simple_spread\\7"
     assert os.path.exists(model_dir)
     data = torch.load(os.path.join(model_dir, 'model.pt'))
     for agent, actor_parameter in zip(maddpg.agents, data):
